@@ -4,6 +4,7 @@
     --black-1: #242424; /* screens and buttons */
     --blue-1: #28aafd; /* buttons */
     --green-1: #51ad60; /* screen */
+    --white-1: #e3e3e3; /* buttons */
     --shadow-dark: rgba(0,0,0,0.3);
     --shadow-light: rgba(255,255,255,0.1);
 /*  */
@@ -45,15 +46,15 @@ body {
     width: 50%;
     height: 100%;
     border-radius: 10px;
-    background-color: aquamarine;
+    background-color: transparent;
 }
 
 .left-data img {
     position: absolute;
     background-color: var(--black-1);
     border-radius: 10px;
-    top: 25px;
-    left: 10%;
+    top: 75px;
+    left: 8%;
     width: 80%;
     height: 40%;
 }
@@ -62,7 +63,7 @@ body {
     position: absolute;
     background-color: var(--green-1);
     border-radius: 5px;
-    bottom: 50px;
+    top: 600px;
     width: 50%;
     height: 10%;
     right: 25%;
@@ -73,6 +74,7 @@ body {
     position: absolute;
     left: 25%;
     top: 10px;
+    
 }
 
 .pokemon-name {
@@ -81,12 +83,23 @@ body {
     bottom: 10px;
 }
 
+.divider {
+    position: absolute;
+    width: 10%;
+    height: 90%;
+    top: 5%;
+    left: 45%;
+    background-color: var(--red-1);
+    outline-style: solid;
+    outline-color: black;
+}
+
 .right-data {
     position: relative;
     overflow: hidden;
     width: 50%;
     height: 100%;
-    background-color: rgb(255, 191, 127);
+    background-color:transparent;
     border-radius: 10px;
 }
 
@@ -98,6 +111,8 @@ body {
     background-color: #242424;
     left: 12.5%;
     top: 75px;
+    padding: 10px;
+    text-align: justify;
     
 }
 
@@ -108,8 +123,9 @@ body {
     height: 5%;
     background-color: var(--black-1);
     left: 16%;
-    bottom: 75px;
-    padding: 5px;
+    top: 520px;
+    padding: 10px;
+    text-align: center;
 
 }
 
@@ -120,10 +136,171 @@ body {
     height: 5%;
     background-color: var(--black-1);
     right: 16%;
-    bottom: 75px;
-    padding: 5px;
-
+    top: 520px;
+    padding: 10px;
+    text-align: center;
 }
+
+.search {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.search input[type=text] {
+    background-color: var(--shadow-light);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    color: var(--grey-1);
+    font-size: 0.8em;
+    text-align: center;
+    outline-style: groove;
+    outline-color: blue;
+    color: yellow;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-transform: lowercase;
+}
+
+.zero {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    background-color: var(--blue-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left: 60px;
+    top: 350px;
+}
+.one {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    background-color: var(--blue-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left: 120px;
+    top: 350px;
+}
+.two {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    background-color: var(--blue-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left:180px;
+    top: 350px;
+}
+.three {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    background-color: var(--blue-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left: 240px;
+    top: 350px;
+}
+.four {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    background-color: var(--blue-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left: 300px;
+    top: 350px;
+}
+
+.five {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    background-color: var(--blue-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left: 60px;
+    top: 380px;
+}
+.six {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    background-color: var(--blue-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left: 120px;
+    top: 380px;
+}
+.seven {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    background-color: var(--blue-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left: 180px;
+    top: 380px;
+}
+.eight {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    background-color: var(--blue-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left: 240px;
+    top: 380px;
+}
+.nine {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    background-color: var(--blue-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left: 300px;
+    top: 380px;
+}
+
+input.go {
+    position: relative;
+    z-index: 1;
+    height: 30px;
+    width: 60px;
+    background-color: var(--white-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left: 10px;
+    top: 500px;
+}
+
+input.random {
+    position: absolute;
+    z-index: 1;
+    height: 30px;
+    width: 60px;
+    background-color: var(--white-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    left: 100px;
+    top: 500px;
+}
+
+
 
 
 
