@@ -35,7 +35,9 @@
 <div class="container" *ngIf="pokemonData">
 
   <div class="left-data">
-    <img src= "{{pokemonData.sprites.other['official-artwork'].front_default}}" alt="Lapras"> 
+    <div class="poke-pic">
+      <img src= "{{pokemonData.sprites.other['official-artwork'].front_default}}" alt="{{pokemonId}}"> 
+    </div>
     <div class="pokemon-id">
       <div class="pokemon-number">No. {{pokemonData.id}}</div>
       <div class="pokemon-name">{{pokemonData.name | uppercase}}</div>

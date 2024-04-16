@@ -53,14 +53,26 @@ body {
     background-color: transparent;
 }
 
-.left-data img {
+.poke-pic {
+    position: absolute;
+    
+    background-color: var(--white-1);
+    border-radius: 10px;
+    top: 150px;
+    left: 5%;
+    width: 85%;
+    height: 45%;
+
+}
+
+.poke-pic img {
     position: absolute;
     background-color: var(--black-1);
     border-radius: 10px;
-    top: 150px;
-    left: 8%;
-    width: 80%;
-    height: 40%;
+    top: 12.5%;
+    left: 12.5%;
+    width: 75%;
+    height: 70%;
 }
 
 .pokemon-id {

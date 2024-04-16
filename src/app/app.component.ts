@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
     this.getPokemonInfo(this.pokemonId);
     this.pokemonId = '';
     this.pokemonData!.types[1].type.name = '';
-    // this.bigBlueFlash!.style.backgroundColor = '#575757';
+    // this.bigBlueFlash!.style.backgroundColor = 'background-color: ##575757;';
   }
 
   up() {
