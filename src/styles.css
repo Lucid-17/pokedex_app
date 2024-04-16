@@ -282,7 +282,7 @@ body {
 }
 
 input.go {
-    position: absolute;
+    position: relative;
     z-index: 1;
     height: 30px;
     width: 60px;
@@ -290,12 +290,12 @@ input.go {
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 469px;
-    top: 580px;
+    left: -8px;
+    top: 586px;
 }
 
 input.random {
-    position: absolute;
+    position: relative;
     z-index: 1;
     height: 30px;
     width: 60px;
@@ -303,12 +303,12 @@ input.random {
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 532px;
-    top: 580px;
+    left: 155px;
+    top: 550px;
 }
 
 input.up {
-    position: absolute;
+    position: relative;
     z-index: 1;
     height: 20px;
     width: 50px;
@@ -317,13 +317,13 @@ input.up {
     text-align: center;
     border-radius: 5px;
     border-color: var(--white-1);
-    left: 720px;
-    top: 550px;
+    left: 342px;
+    top: 475px;
 
 }
 
 input.down {
-    position: absolute;
+    position: relative;
     z-index: 1;
     height: 20px;
     width: 50px;
@@ -332,8 +332,8 @@ input.down {
     text-align: center;
     border-radius: 5px;
     border-color: var(--white-1);
-    left: 668px;
-    top: 550px;
+    left: 290px;
+    top: 453px;
 }
 
 .big-blue-back {
@@ -344,7 +344,7 @@ input.down {
     background-color: var(--white-2);
     border-radius: 50%;
     display: inline-block;
-    top: 138px;
+    top: 25px;
     left: 30px;
     outline-style: solid;
     outline-color: #000;
@@ -358,9 +358,9 @@ input.down {
     z-index: 1;
     border-radius: 50%;
     display: inline-block;
-    top: 142px;
+    top: 29px;
     left: 37px;
-    background-color: var(--blue-two);
+    
     outline-style: solid;
     outline-color: #000;
     outline-width: 2px;
@@ -373,7 +373,7 @@ input.down {
     z-index: 1;
     border-radius: 50%;
     display: inline-block;
-    top: 146px;
+    top: 33px;
     left: 41px;
     background-color: var(--blue-three);
   }
@@ -385,7 +385,7 @@ input.down {
     z-index: 1;
     border-radius: 50%;
     display: inline-block;
-    top: 146px;
+    top: 33px;
     left: 43px;
     background-color: var(--blue-two);
   }
@@ -397,7 +397,7 @@ input.down {
     z-index: 1;
     border-radius: 50%;
     display: inline-block;
-    top: 150px;
+    top: 37px;
     left: 48px;
     background-color: var(--white-3);
   }

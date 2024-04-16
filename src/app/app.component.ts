@@ -4,6 +4,7 @@ import { DataService } from './services/data.service';
 import { response } from 'express';
 import { PokemonEntryData } from './models/entry.model';
 import { max } from 'rxjs';
+import { app } from '../../server';
 
 
 @Component({
@@ -26,6 +27,8 @@ export class AppComponent implements OnInit {
   pokemonId: string | number = '';
   pokemonData?: PokemonData;
   pokemonEntry?: PokemonEntryData;
+  // bigBlueFlash = document.getElementById("blue1");
+
   
 
 
@@ -42,6 +45,7 @@ export class AppComponent implements OnInit {
     this.getPokemonInfo(this.pokemonId);
     this.pokemonId = '';
     this.pokemonData!.types[1].type.name = '';
+    
   }
 
   onRandom() {
@@ -49,6 +53,7 @@ export class AppComponent implements OnInit {
     this.getPokemonInfo(this.pokemonId);
     this.pokemonId = '';
     this.pokemonData!.types[1].type.name = '';
+    // this.bigBlueFlash!.style.backgroundColor = '#575757';
   }
 
   up() {
