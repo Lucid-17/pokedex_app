@@ -64,7 +64,7 @@ body {
     background-color: var(--green-1);
     border-radius: 5px;
     top: 600px;
-    width: 50%;
+    width: 60%;
     height: 10%;
     right: 25%;
 
@@ -72,15 +72,16 @@ body {
 
 .pokemon-number {
     position: absolute;
-    left: 25%;
+    left: 10%;
     top: 10px;
     
 }
 
 .pokemon-name {
     position: absolute;
-    left: 25%;
+    left: 10%;
     bottom: 10px;
+    text-align: center;
 }
 
 .divider {
@@ -92,6 +93,8 @@ body {
     background-color: var(--red-1);
     outline-style: solid;
     outline-color: black;
+    border-radius: 10px;
+
 }
 
 .right-data {
@@ -106,8 +109,8 @@ body {
 .entry {
     position: absolute;
     border-radius: 10px;
-    width: 75%;
-    height: 25%;
+    width: 85%;
+    height: 30%;
     background-color: #242424;
     left: 12.5%;
     top: 75px;
@@ -119,10 +122,10 @@ body {
 .primary-type {
     position: absolute;
     border-radius: 10px;
-    width: 25%;
+    width: 37%;
     height: 5%;
     background-color: var(--black-1);
-    left: 16%;
+    left: 14%;
     top: 520px;
     padding: 10px;
     text-align: center;
@@ -132,10 +135,10 @@ body {
 .secondary-type {
     position: absolute;
     border-radius: 10px;
-    width: 25%;
+    width: 37%;
     height: 5%;
     background-color: var(--black-1);
-    right: 16%;
+    right: 8%;
     top: 520px;
     padding: 10px;
     text-align: center;
