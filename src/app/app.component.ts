@@ -16,20 +16,26 @@ import { max } from 'rxjs';
 
 export class AppComponent implements OnInit {
 
+  
+
 
   constructor(private dataService: DataService){
 
   }
 
-  pokemonId: string | number = 'lapras';
+  pokemonId: string | number = '';
   pokemonData?: PokemonData;
   pokemonEntry?: PokemonEntryData;
   
 
 
   ngOnInit(): void {
+    // this.getPokemonInfo(this.pokemonId);
+    // this.pokemonId = '';
+    this.pokemonId = Math.floor(Math.random() * (1025 - 1 + 1)) + 1;
     this.getPokemonInfo(this.pokemonId);
     this.pokemonId = '';
+    this.pokemonData!.types[1].type.name = '';
   }
 
   onSubmit() {
@@ -43,6 +49,16 @@ export class AppComponent implements OnInit {
     this.getPokemonInfo(this.pokemonId);
     this.pokemonId = '';
     this.pokemonData!.types[1].type.name = '';
+  }
+
+  up() {
+    this.pokemonId = this.pokemonData!.id + 1;
+    this.onSubmit();
+  }
+
+  down() {
+    this.pokemonId = this.pokemonData!.id - 1;
+    this.onSubmit();
   }
 
     
