@@ -41,6 +41,8 @@ body {
     border-radius: 10px;
     box-shadow: 10px 10px 10px 10px var(--shadow-dark);
     color: white;
+    outline-style: solid;
+    outline-color: #000;
 }
 
 .left-data {
@@ -55,14 +57,14 @@ body {
 
 .poke-pic {
     position: absolute;
-    
     background-color: var(--white-1);
     border-radius: 10px;
     top: 150px;
     left: 5%;
     width: 85%;
     height: 45%;
-
+    outline-style: solid;
+    outline-color: #000;
 }
 
 .poke-pic img {
@@ -73,6 +75,8 @@ body {
     left: 12.5%;
     width: 75%;
     height: 70%;
+    outline-style: solid;
+    outline-color: #000;
 }
 
 .pokemon-id {
@@ -83,14 +87,14 @@ body {
     width: 60%;
     height: 10%;
     right: 25%;
-
+    outline-style: solid;
+    outline-color: #000;
 }
 
 .pokemon-number {
     position: absolute;
     left: 10%;
     top: 10px;
-    
 }
 
 .pokemon-name {
@@ -132,7 +136,8 @@ body {
     top: 75px;
     padding: 10px;
     text-align: justify;
-    
+    outline-style: solid;
+    outline-color: #000;    
 }
 
 .primary-type {
@@ -145,7 +150,8 @@ body {
     top: 520px;
     padding: 10px;
     text-align: center;
-
+    outline-style: solid;
+    outline-color: #000;
 }
 
 .secondary-type {
@@ -158,14 +164,18 @@ body {
     top: 520px;
     padding: 10px;
     text-align: center;
+    outline-style: solid;
+    outline-color: #000;
 }
 
 .search {
     margin-bottom: 1em;
     text-align: center;
+    top: 10px;
 }
 
 .search input[type=text] {
+    position: relative;
     background-color: var(--shadow-light);
     outline: none;
     border: none;
@@ -179,7 +189,9 @@ body {
     color: yellow;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     text-transform: lowercase;
-}
+    top: 70px;
+    left: 25px;
+    }
 
 .zero {
     position: absolute;
