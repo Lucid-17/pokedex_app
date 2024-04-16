@@ -5,8 +5,12 @@
     --blue-1: #28aafd; /* buttons */
     --green-1: #51ad60; /* screen */
     --white-1: #e3e3e3; /* buttons */
+    --white-2: #dfe8e3; /*lights*/
+    --white-3: #9bd9fe; /*lights*/
     --shadow-dark: rgba(0,0,0,0.3);
     --shadow-light: rgba(255,255,255,0.1);
+    --blue-two: #27a9fb; /* lights */
+    --blue-three: #196a9f; /* lights */
 /*  */
 }
 
@@ -53,7 +57,7 @@ body {
     position: absolute;
     background-color: var(--black-1);
     border-radius: 10px;
-    top: 75px;
+    top: 150px;
     left: 8%;
     width: 80%;
     height: 40%;
@@ -86,10 +90,10 @@ body {
 
 .divider {
     position: absolute;
-    width: 10%;
+    width: 6%;
     height: 90%;
     top: 5%;
-    left: 45%;
+    left: 47%;
     background-color: var(--red-1);
     outline-style: solid;
     outline-color: black;
@@ -332,7 +336,71 @@ input.down {
     top: 550px;
 }
 
+.big-blue-back {
+    position: absolute;
+    height: 62px;
+    width: 62px;
+    z-index: 1;
+    background-color: var(--white-2);
+    border-radius: 50%;
+    display: inline-block;
+    top: 138px;
+    left: 30px;
+    outline-style: solid;
+    outline-color: #000;
+    outline-width: 2px;
+  }
 
+.big-blue-1 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    border-radius: 50%;
+    display: inline-block;
+    top: 142px;
+    left: 37px;
+    background-color: var(--blue-two);
+    outline-style: solid;
+    outline-color: #000;
+    outline-width: 2px;
+  }
+
+  .big-blue-dark {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    z-index: 1;
+    border-radius: 50%;
+    display: inline-block;
+    top: 146px;
+    left: 41px;
+    background-color: var(--blue-three);
+  }
+
+  .big-blue-2 {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    z-index: 1;
+    border-radius: 50%;
+    display: inline-block;
+    top: 146px;
+    left: 43px;
+    background-color: var(--blue-two);
+  }
+
+  .big-blue-white {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    z-index: 1;
+    border-radius: 50%;
+    display: inline-block;
+    top: 150px;
+    left: 48px;
+    background-color: var(--white-3);
+  }
 
 
 
