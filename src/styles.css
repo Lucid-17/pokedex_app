@@ -275,7 +275,7 @@ body {
 }
 
 input.go {
-    position: relative;
+    position: absolute;
     z-index: 1;
     height: 30px;
     width: 60px;
@@ -283,8 +283,8 @@ input.go {
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 10px;
-    top: 500px;
+    left: 469px;
+    top: 580px;
 }
 
 input.random {
@@ -296,8 +296,8 @@ input.random {
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 100px;
-    top: 500px;
+    left: 532px;
+    top: 580px;
 }
 
 
