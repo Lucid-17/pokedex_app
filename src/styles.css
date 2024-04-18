@@ -132,7 +132,7 @@ body {
     height: 35%;
     background-color: #242424;
     left: 12.5%;
-    top: 75px;
+    top: 175px;
     padding: 10px;
     text-align: left;
     outline-style: solid;
@@ -147,7 +147,7 @@ body {
     height: 5%;
     background-color: var(--black-1);
     left: 14%;
-    top: 520px;
+    bottom: 120px;
     padding: 10px;
     text-align: center;
     outline-style: solid;
@@ -161,7 +161,7 @@ body {
     height: 5%;
     background-color: var(--black-1);
     right: 8%;
-    top: 520px;
+    bottom: 120px;
     padding: 10px;
     text-align: center;
     outline-style: solid;
@@ -175,8 +175,8 @@ body {
 }
 
 .search input[type=text] {
-    position: relative;
-    background-color: var(--shadow-light);
+    position: absolute;
+    background-color: var(--white-1);
     outline: none;
     border: none;
     border-radius: 20px;
@@ -189,124 +189,134 @@ body {
     color: yellow;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     text-transform: lowercase;
-    top: 70px;
-    left: 25px;
+    top: 35px;
+    right: 12.5%;
     }
 
-.zero {
+input.zero {
     position: absolute;
     height: 30px;
     width: 60px;
+    z-index: 1;
     background-color: var(--blue-1);
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 60px;
-    top: 350px;
+    right: 290px;
+    bottom: 280px;
 }
-.one {
+input.one {
     position: absolute;
     height: 30px;
     width: 60px;
+    z-index: 1;
     background-color: var(--blue-1);
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 120px;
-    top: 350px;
+    right: 230px;
+    bottom: 280px;
 }
-.two {
+input.two {
     position: absolute;
     height: 30px;
     width: 60px;
+    z-index: 1;
     background-color: var(--blue-1);
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left:180px;
-    top: 350px;
+    right: 170px;
+    bottom: 280px;
 }
-.three {
+input.three {
     position: absolute;
     height: 30px;
     width: 60px;
+    z-index: 1;
     background-color: var(--blue-1);
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 240px;
-    top: 350px;
+    right: 110px;
+    bottom: 280px;
 }
-.four {
+input.four {
     position: absolute;
     height: 30px;
     width: 60px;
+    z-index: 1;
     background-color: var(--blue-1);
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 300px;
-    top: 350px;
+    right: 50px;
+    bottom: 280px;
 }
 
-.five {
+input.five {
     position: absolute;
     height: 30px;
     width: 60px;
+    z-index: 1;
     background-color: var(--blue-1);
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 60px;
-    top: 380px;
+    right: 290px;
+    bottom: 248px;
 }
-.six {
+input.six {
     position: absolute;
     height: 30px;
     width: 60px;
+    z-index: 1;
     background-color: var(--blue-1);
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 120px;
-    top: 380px;
+    right: 230px;
+    bottom: 248px;
 }
-.seven {
+input.seven {
     position: absolute;
     height: 30px;
     width: 60px;
+    z-index: 1;
     background-color: var(--blue-1);
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 180px;
-    top: 380px;
+    right: 170px;
+    bottom: 248px;
 }
-.eight {
+input.eight {
     position: absolute;
     height: 30px;
     width: 60px;
+    z-index: 1;
     background-color: var(--blue-1);
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 240px;
-    top: 380px;
+    right: 110px;
+    bottom: 248px;
 }
-.nine {
+input.nine {
     position: absolute;
     height: 30px;
     width: 60px;
+    z-index: 1;
     background-color: var(--blue-1);
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 300px;
-    top: 380px;
+    right: 50px;
+    bottom: 248px;
 }
 
 input.go {
-    position: relative;
+    position: absolute;
     z-index: 1;
     height: 30px;
     width: 60px;
@@ -314,12 +324,12 @@ input.go {
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: -8px;
-    top: 586px;
+    right: 290px;
+    bottom: 190px;
 }
 
 input.random {
-    position: relative;
+    position: absolute;
     z-index: 1;
     height: 30px;
     width: 60px;
@@ -327,12 +337,12 @@ input.random {
     outline-style: solid;
     outline-color: black;
     outline-width: 1px;
-    left: 155px;
-    top: 550px;
+    right: 228px;
+    bottom: 190px;
 }
 
 input.up {
-    position: relative;
+    position: absolute;
     z-index: 1;
     height: 20px;
     width: 50px;
@@ -341,13 +351,13 @@ input.up {
     text-align: center;
     border-radius: 5px;
     border-color: var(--white-1);
-    left: 342px;
-    top: 475px;
+    right: 10px;
+    bottom: 220px;
 
 }
 
 input.down {
-    position: relative;
+    position: absolute;
     z-index: 1;
     height: 20px;
     width: 50px;
@@ -356,8 +366,8 @@ input.down {
     text-align: center;
     border-radius: 5px;
     border-color: var(--white-1);
-    left: 290px;
-    top: 453px;
+    right: 60px;
+    bottom: 220px;
 }
 
 .big-blue-back {

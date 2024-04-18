@@ -18,19 +18,53 @@ import { stringify } from 'querystring';
 })
 
 export class AppComponent implements OnInit {
+  
 
   constructor(private dataService: DataService){
 
   }
-
+  
   pokemonId: string | number = '';
   pokemonData?: PokemonData;
   pokemonEntry?: PokemonEntryData;
   flash: string = 'background-color: #27a9fb;';
   entry: string | undefined = '';
+
   
+  addZero(){
+    this.pokemonId += '0';
+  };
+  addOne(){
+    this.pokemonId += '1';
+  }; 
+  addTwo(){
+    this.pokemonId += '2';
+  }; 
+  addThree(){
+    this.pokemonId += '3';
+  }; 
+  addFour(){
+    this.pokemonId += '4';
+  }; 
+  addFive(){
+    this.pokemonId += '5';
+  }; 
+  addSix(){
+    this.pokemonId += '6';
+  }; 
+  addSeven(){
+    this.pokemonId += '7';
+  }; 
+  addEight(){
+    this.pokemonId += '8';
+  }; 
+  addNine(){
+    this.pokemonId += '9';
+  }; 
+   
   
   ngOnInit(): void {
+    this.pokemonId = '';
     this.pokemonId = Math.floor(Math.random() * (1025 - 1 + 1)) + 1;
     this.getPokemonInfo(this.pokemonId);
     this.pokemonId = '';
@@ -39,6 +73,12 @@ export class AppComponent implements OnInit {
 
   onSubmit() {
     this.getPokemonInfo(this.pokemonId);
+    // if(this.pokemonData!.types.length > 1){
+    //   this.secondaryType = this.pokemonData?.types[1].type.name;
+    // }
+    // else{
+    //   this.secondaryType = '';
+    // };
     this.pokemonId = '';
     this.pokemonData!.types[1].type.name = '';
   }
@@ -87,6 +127,7 @@ export class AppComponent implements OnInit {
     })
     
   }
+  title = 'pokedex-app'
 
 }
 
