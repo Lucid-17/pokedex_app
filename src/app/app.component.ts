@@ -2,9 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { PokemonData } from './models/pokemon.model';
 import { DataService } from './services/data.service';
 import { response } from 'express';
-import { PokemonEntryData } from './models/entry.model';
-import { max } from 'rxjs';
+import { FlavorTextEntry, PokemonEntryData } from './models/entry.model';
+import { find, max } from 'rxjs';
 import { app } from '../../server';
+import { of } from 'rxjs';
+import { STRING_TYPE } from '@angular/compiler';
+import { stringify } from 'querystring';
 
 
 @Component({
@@ -14,11 +17,7 @@ import { app } from '../../server';
 
 })
 
-
 export class AppComponent implements OnInit {
-
-  
-
 
   constructor(private dataService: DataService){
 
@@ -27,14 +26,10 @@ export class AppComponent implements OnInit {
   pokemonId: string | number = '';
   pokemonData?: PokemonData;
   pokemonEntry?: PokemonEntryData;
-  // bigBlueFlash = document.getElementById("blue1");
-
+  flash: string = 'background-color: #27a9fb;';
+  entry: string | undefined = '';
   
-
-
   ngOnInit(): void {
-    // this.getPokemonInfo(this.pokemonId);
-    // this.pokemonId = '';
     this.pokemonId = Math.floor(Math.random() * (1025 - 1 + 1)) + 1;
     this.getPokemonInfo(this.pokemonId);
     this.pokemonId = '';
@@ -45,7 +40,6 @@ export class AppComponent implements OnInit {
     this.getPokemonInfo(this.pokemonId);
     this.pokemonId = '';
     this.pokemonData!.types[1].type.name = '';
-    
   }
 
   onRandom() {
@@ -53,7 +47,6 @@ export class AppComponent implements OnInit {
     this.getPokemonInfo(this.pokemonId);
     this.pokemonId = '';
     this.pokemonData!.types[1].type.name = '';
-    // this.bigBlueFlash!.style.backgroundColor = 'background-color: ##575757;';
   }
 
   up() {
@@ -65,8 +58,6 @@ export class AppComponent implements OnInit {
     this.pokemonId = this.pokemonData!.id - 1;
     this.onSubmit();
   }
-
-    
 
   private getPokemonInfo(pokemonName: string | number) {
     this.dataService.getPokemonData(pokemonName)
@@ -80,9 +71,20 @@ export class AppComponent implements OnInit {
     .subscribe({
       next: (response_2) => {
         this.pokemonEntry = response_2;
-        console.log(response_2)
+        console.log(response_2);
+        if(this.pokemonEntry!.flavor_text_entries[0].language.name != "en"){
+          for(let i=0; i<this.pokemonEntry.flavor_text_entries.length; i++) {
+            if(this.pokemonEntry.flavor_text_entries[i].language.name == 'en'){
+              this.entry = this.pokemonEntry.flavor_text_entries[i].flavor_text;
+            }
+          };
+        }
+        else {
+          this.entry = this.pokemonEntry!.flavor_text_entries[0].flavor_text;
+        };
       }
     })
+    
   }
 
 }

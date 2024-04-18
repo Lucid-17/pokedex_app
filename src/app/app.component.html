@@ -1,14 +1,3 @@
-<!-- <h1>
-  <head>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  </head>
-</h1> -->
-
-  <!-- <head>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  </head> -->
-
-
 
 <div class="search">
   <form #form="ngForm" (submit)="onSubmit()">
@@ -31,7 +20,6 @@
 </div>
 
 
-
 <div class="container" *ngIf="pokemonData">
 
   <div class="left-data">
@@ -44,7 +32,7 @@
     </div>
     <div class="top-lights">
       <span class="big-blue-back" style="color: black;"></span>
-      <span class="big-blue-1" id="blue1" style="background-color: #27a9fb;"></span>
+      <span class="big-blue-1" id="blue1" [style]="flash"></span>
       <span class="big-blue-dark"></span>
       <span class="big-blue-2"></span>
       <span class="big-blue-white"></span>
@@ -52,9 +40,9 @@
   </div>
 
   <div class="divider"></div>
-
+  
   <div class="right-data">
-    <div class="entry">{{pokemonEntry!.flavor_text_entries[0].flavor_text}}</div>
+    <div class="entry" id="entry">{{entry}}</div>
     <div class="primary-type">{{pokemonData.types[0].type.name | uppercase}}</div>
     <div class="secondary-type">{{pokemonData.types[1].type.name | uppercase}}</div>
 
