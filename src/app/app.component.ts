@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
   flash: string = 'background-color: #27a9fb;';
   entry: string | undefined = '';
   
+  
   ngOnInit(): void {
     this.pokemonId = Math.floor(Math.random() * (1025 - 1 + 1)) + 1;
     this.getPokemonInfo(this.pokemonId);
@@ -75,12 +76,12 @@ export class AppComponent implements OnInit {
         if(this.pokemonEntry!.flavor_text_entries[0].language.name != "en"){
           for(let i=0; i<this.pokemonEntry.flavor_text_entries.length; i++) {
             if(this.pokemonEntry.flavor_text_entries[i].language.name == 'en'){
-              this.entry = this.pokemonEntry.flavor_text_entries[i].flavor_text;
+              this.entry = this.pokemonEntry.flavor_text_entries[i].flavor_text.normalize().replaceAll('\n', ' ').replaceAll('\u000c',' ');
             }
           };
         }
         else {
-          this.entry = this.pokemonEntry!.flavor_text_entries[0].flavor_text;
+          this.entry = this.pokemonEntry!.flavor_text_entries[0].flavor_text.normalize().replaceAll('\n', ' ').replaceAll('\u000c',' ');
         };
       }
     })

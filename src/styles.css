@@ -129,14 +129,15 @@ body {
     position: absolute;
     border-radius: 10px;
     width: 85%;
-    height: 30%;
+    height: 35%;
     background-color: #242424;
     left: 12.5%;
     top: 75px;
     padding: 10px;
-    text-align: justify;
+    text-align: left;
     outline-style: solid;
-    outline-color: #000;    
+    outline-color: #000;
+    text-wrap: balance;    
 }
 
 .primary-type {
