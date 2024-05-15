@@ -129,39 +129,3 @@ export class AppComponent implements OnInit {
   title = 'pokedex-app'
 
 }
-
-
-
-// ngOnInit(): void {
-//   this.getWeatherData(this.cityName);
-//   this.cityName = '';   
-// }
-
-// onSubmit() {
-//   this.getWeatherData(this.cityName);
-//   this.cityName = '';
-// }
-
-// private getWeatherData(cityName: string) {
-//   this.WeatherService.getWeatherData(cityName)
-//   .subscribe({
-//     next: (response) => {
-//       this.weatherData = response;
-//       console.log(response);
-
-//     }
-//   });
-// }
-
-// title = 'weather-app-2';
-// }
-//   ngOnInitEntry(): void {
-//     this.dataService.getPokemonEntry('lapras')
-//     .subscribe({
-//       next: (response) => {
-//         this.pokemonEntry = response;
-//         console.log(response);
-//       }
-//     })
-//   }
-// }
