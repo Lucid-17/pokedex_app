@@ -73,10 +73,6 @@ export class AppComponent implements OnInit {
 
   onSubmit() {
     this.getPokemonInfo(this.pokemonId);
-    // if(this.pokemonData!.types.length == 1){
-    //   this.pokemonData!.types[1].type.name = '';
-    // hi }
-    
     this.pokemonData!.types[1].type.name = '';
     this.pokemonId = '';
     
