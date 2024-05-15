@@ -25,22 +25,6 @@
     <div class="primary-type">{{pokemonData.types[0].type.name | uppercase}}</div>
     <div class="secondary-type">{{pokemonData!.types[1].type.name | uppercase}}</div>
 
-    <!-- <button class="zero" type="button">0</button>
-    <button class="one" type="button">1</button>
-    <button class="two" type="button">2</button>
-    <button class="three" type="button">3</button>
-    <button class="four" type="button">4</button>
-
-    <button class="five" type="button">5</button>
-    <button class="six" type="button">6</button>
-    <button class="seven" type="button">7</button>
-    <button class="eight" type="button">8</button>
-    <button class="nine" type="button">9</button> -->
-
-   
-
-    
-
   </div>
   <div class="search">
     <form #form="ngForm" (submit)="onSubmit()">
@@ -102,29 +86,5 @@
     </form>
   </div>
 </div>
-
-
-
-<!-- 
-<header>Hello World</header>
-<div class="container">
-
-  <div class="left-data">
-    <img src="../assets/131.png" alt=""> 
-    <div class="pokemon-id">
-      <div class="pokemon-number">No. 131</div>
-      <div class="pokemon-name">Lapras</div>
-    </div>
-
-  </div>
-
-  <div class="right-data">
-    <div class="entry">Sample</div>
-    <div class="primary-type">Water</div>
-    <div class="secondary-type">Ice</div>
-
-  </div>
-</div> -->
-
 
 <router-outlet></router-outlet>
