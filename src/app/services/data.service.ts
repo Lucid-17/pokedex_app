@@ -5,7 +5,6 @@ import { PokemonData } from '../models/pokemon.model';
 import { PokemonEntryData } from '../models/entry.model';
 import { Observable } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root'
 })

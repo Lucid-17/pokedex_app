@@ -1,28 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonData } from './models/pokemon.model';
 import { DataService } from './services/data.service';
-import { response } from 'express';
-import { FlavorTextEntry, PokemonEntryData } from './models/entry.model';
-import { find, max } from 'rxjs';
-import { app } from '../../server';
-import { of } from 'rxjs';
-import { STRING_TYPE } from '@angular/compiler';
-import { stringify } from 'querystring';
-
+import { PokemonEntryData } from './models/entry.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
-
 })
 
 export class AppComponent implements OnInit {
   
-
-  constructor(private dataService: DataService){
-
-  }
+  constructor(private dataService: DataService){}
   
   pokemonId: string | number = '';
   pokemonData?: PokemonData;
@@ -30,7 +19,6 @@ export class AppComponent implements OnInit {
   flash: string = 'background-color: #27a9fb;';
   entry: string | undefined = '';
 
-  
   addZero(){
     this.pokemonId += '0';
   };
@@ -62,7 +50,6 @@ export class AppComponent implements OnInit {
     this.pokemonId += '9';
   }; 
    
-  
   ngOnInit(): void {
     this.pokemonId = '';
     this.pokemonId = Math.floor(Math.random() * (1025 - 1 + 1)) + 1;
@@ -73,10 +60,6 @@ export class AppComponent implements OnInit {
 
   onSubmit() {
     this.getPokemonInfo(this.pokemonId);
-    // if(this.pokemonData!.types.length == 1){
-    //   this.pokemonData!.types[1].type.name = '';
-    // hi }
-    
     this.pokemonData!.types[1].type.name = '';
     this.pokemonId = '';
     
@@ -129,39 +112,3 @@ export class AppComponent implements OnInit {
   title = 'pokedex-app'
 
 }
-
-
-
-// ngOnInit(): void {
-//   this.getWeatherData(this.cityName);
-//   this.cityName = '';   
-// }
-
-// onSubmit() {
-//   this.getWeatherData(this.cityName);
-//   this.cityName = '';
-// }
-
-// private getWeatherData(cityName: string) {
-//   this.WeatherService.getWeatherData(cityName)
-//   .subscribe({
-//     next: (response) => {
-//       this.weatherData = response;
-//       console.log(response);
-
-//     }
-//   });
-// }
-
-// title = 'weather-app-2';
-// }
-//   ngOnInitEntry(): void {
-//     this.dataService.getPokemonEntry('lapras')
-//     .subscribe({
-//       next: (response) => {
-//         this.pokemonEntry = response;
-//         console.log(response);
-//       }
-//     })
-//   }
-// }
