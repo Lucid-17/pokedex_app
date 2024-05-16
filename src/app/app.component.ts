@@ -24,18 +24,13 @@ export class AppComponent implements OnInit {
   };
    
   ngOnInit(): void {
-    this.pokemonId = '';
-    this.pokemonId = Math.floor(Math.random() * (1025 - 1 + 1)) + 1;
-    this.getPokemonInfo(this.pokemonId);
-    this.pokemonId = '';
-    this.pokemonData!.types[1].type.name = '';
+    this.onRandom();
   }
 
   onSubmit() {
     this.getPokemonInfo(this.pokemonId);
     this.pokemonId = '';
     this.pokemonData!.types[1].type.name = '';
-    
   }
 
   onRandom() {
@@ -55,14 +50,19 @@ export class AppComponent implements OnInit {
     this.onSubmit();
   }
 
-  private getPokemonInfo(pokemonName: string | number) {
+  getPokemonInfo(pokemonName: string | number) {
     this.dataService.getPokemonData(pokemonName)
     .subscribe({
       next: (response) => {
         this.pokemonData = response;
         console.log(response);
+        if (this.pokemonData.types.length > 1) {
+          this.pokemonData.types[1].type.name = this.pokemonData.types[1].type.name;
+        } else {
+          this.pokemonData.types[1].type.name = this.pokemonData.types[0].type.name;
+        }
       }
-    })
+    });
     this.dataService.getPokemonEntry(pokemonName)
     .subscribe({
       next: (response_2) => {
