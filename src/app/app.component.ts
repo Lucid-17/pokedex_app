@@ -33,8 +33,8 @@ export class AppComponent implements OnInit {
 
   onSubmit() {
     this.getPokemonInfo(this.pokemonId);
-    this.pokemonData!.types[1].type.name = '';
     this.pokemonId = '';
+    this.pokemonData!.types[1].type.name = '';
     
   }
 
