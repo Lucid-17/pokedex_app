@@ -19,36 +19,9 @@ export class AppComponent implements OnInit {
   flash: string = 'background-color: #27a9fb;';
   entry: string | undefined = '';
 
-  addZero(){
-    this.pokemonId += '0';
+  addNumber(num1: number): void {
+    this.pokemonId += `${num1}`;
   };
-  addOne(){
-    this.pokemonId += '1';
-  }; 
-  addTwo(){
-    this.pokemonId += '2';
-  }; 
-  addThree(){
-    this.pokemonId += '3';
-  }; 
-  addFour(){
-    this.pokemonId += '4';
-  }; 
-  addFive(){
-    this.pokemonId += '5';
-  }; 
-  addSix(){
-    this.pokemonId += '6';
-  }; 
-  addSeven(){
-    this.pokemonId += '7';
-  }; 
-  addEight(){
-    this.pokemonId += '8';
-  }; 
-  addNine(){
-    this.pokemonId += '9';
-  }; 
    
   ngOnInit(): void {
     this.pokemonId = '';

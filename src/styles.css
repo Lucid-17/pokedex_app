@@ -23,6 +23,334 @@
 body {
     font-family: "Press Start 2P", "consolas", sans-serif;
     font-size: 16px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 95%;
+    max-width: 800px;
+    height: auto;
+    background-color: var(--red-1);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px var(--shadow-dark);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+    outline-style: solid;
+    outline-color: #000;
+}
+
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+    }
+    .left-data {
+        width: 100%;
+        padding: 10px;
+        order: 1;
+    }
+    .divider {
+        width: 100%; 
+        height: 10px;
+        margin: 10px 0; 
+        order: 2; 
+    }
+    .right-data {
+        width: 100%;
+        padding: 10px; 
+        order: 3; 
+    }
+}
+
+.left-data {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+}
+
+.top-lights {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.big-blue-back {
+    height: 62px;
+    width: 62px;
+    z-index: 1;
+    background-color: var(--white-2);
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+    left: 30px;
+    outline-style: solid;
+    outline-color: #000;
+    outline-width: 2px;
+  }
+
+.big-blue-1 {
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -55px;
+    margin-bottom: 28px;
+    outline-style: solid;
+    outline-color: #000;
+    outline-width: 2px;
+  }
+
+  .big-blue-dark {
+    height: 45px;
+    width: 45px;
+    z-index: 1;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -46px;
+    margin-bottom: 29px;
+    background-color: var(--blue-three);
+  }
+
+  .big-blue-2 {
+    height: 30px;
+    width: 30px;
+    z-index: 1;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -44px;
+    margin-bottom: 45px;
+    background-color: var(--blue-two);
+  }
+
+  .big-blue-white {
+    height: 8px;
+    width: 8px;
+    z-index: 1;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -25px;
+    margin-bottom: 62px;
+    background-color: var(--white-3);
+  }
+
+.poke-pic {
+    width: 90%;
+    padding-top: 90%;
+    position: relative;
+    background-color: var(--white-1);
+    border-radius: 10px;
+    outline-style: solid;
+    outline-color: #000;
+}
+
+.poke-pic img {
+    position: absolute;
+    background-color: var(--black-1);
+    outline-style: solid;
+    outline-color: #000;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.pokemon-id {
+    width: 100%;
+    text-align: center;
+    margin-top: 20%;
+    background-color: var(--green-1);
+    border-radius: 5px;
+    outline-style: solid;
+    outline-color: #000;
+}
+
+.pokemon-number, .pokemon-name {
+    color: var(--white-1);
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.right-data {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+}
+
+.entry {
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    overflow: auto;
+    padding: 10px;
+    background-color: #242424;
+    color: var(--white-1);
+    border: 2px solid var(--blue-three);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    outline-style: solid;
+    outline-color: #000; 
+}
+
+.upper-number-buttons-container, .lower-number-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.number-button {
+    flex: 0 0 20%;
+    padding: 12px 24px;
+    margin: 1px;
+    background-color: var(--blue-1);
+    color: var(--white-1);
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 2px;
+}
+
+.number-button:hover {
+    background-color: var(--blue-three);
+}
+
+.increment-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 22%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.up, .down {
+    flex: 1;
+    padding: 4px 16px;
+    margin: 0 2px;
+    background-color: var(--black-1);
+    color: var(--blue-two);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.up:hover, .down:hover {
+    background-color: var(--blue-three);
+}
+
+.action-buttons-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+    margin-left: -115px;
+    padding-left: 0;
+}
+
+.go, .random {
+    padding: 12px 24px;
+    margin-right: 2px;
+    background-color: var(--white-1);
+    color: black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.go:hover, .random:hover {
+    background-color: var(--blue-three); 
+}
+
+.random-button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid var(--blue-1);
+    border-radius: 5px;
+    color: rgb(112, 112, 19);
+}
+
+.type-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.primary-type, .secondary-type {
+    flex: 1;
+    padding: 20px;
+    margin: 5px;
+    background-color: var(--black-1);
+    color: var(--white-1);
+    text-align: center;
+    border-radius: 10px;
+    outline-style: solid;
+    outline-color: #000;
+}
+
+
+
+  /* :root {
+    --red-1: #dc0a2d; 
+    --black-1: #242424; 
+    --blue-1: #28aafd; 
+    --green-1: #51ad60; 
+    --white-1: #e3e3e3; 
+    --white-2: #dfe8e3; 
+    --white-3: #9bd9fe; 
+    --shadow-dark: rgba(0,0,0,0.3);
+    --shadow-light: rgba(255,255,255,0.1);
+    --blue-two: #27a9fb; 
+    --blue-three: #196a9f; 
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Press Start 2P", "consolas", sans-serif;
+    font-size: 16px;
     width: 100%;
     height: 100vh;
     background-color: whitesmoke;
@@ -33,9 +361,15 @@ body {
 }
 
 .container {
-    position: relative;
-    width: 800px;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 800px;
+    width: 95%;
     height: 80vh;
+    margin: 20px auto;
     background-color: var(--red-1);
     border-radius: 10px;
     box-shadow: 10px 10px 10px 10px var(--shadow-dark);
@@ -45,11 +379,9 @@ body {
 }
 
 .left-data {
+    flex: 1;
+    margin: 10px;
     position: relative;
-    overflow: hidden;
-    float: left;
-    width: 50%;
-    height: 100%;
     border-radius: 10px;
     background-color: transparent;
 }
@@ -104,25 +436,21 @@ body {
 }
 
 .divider {
-    position: absolute;
     width: 6%;
     height: 90%;
-    top: 5%;
-    left: 47%;
+    align-self: center;
     background-color: var(--red-1);
     outline-style: solid;
     outline-color: black;
     border-radius: 10px;
-
 }
 
 .right-data {
+    flex: 1;
+    margin: 10px;
     position: relative;
-    overflow: hidden;
-    width: 50%;
-    height: 100%;
-    background-color:transparent;
     border-radius: 10px;
+    background-color: transparent;
 }
 
 .entry {
@@ -434,7 +762,7 @@ input.down {
     top: 37px;
     left: 48px;
     background-color: var(--white-3);
-  }
+  } */
 
 
 

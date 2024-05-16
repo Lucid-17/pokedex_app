@@ -2,13 +2,6 @@
 <div class="container" *ngIf="pokemonData">
 
   <div class="left-data">
-    <div class="poke-pic">
-      <img src= "{{pokemonData.sprites.other['official-artwork'].front_default}}" alt="{{pokemonId}}"> 
-    </div>
-    <div class="pokemon-id">
-      <div class="pokemon-number">No. {{pokemonData.id}}</div>
-      <div class="pokemon-name">{{pokemonData.name | uppercase}}</div>
-    </div>
     <div class="top-lights">
       <span class="big-blue-back" style="color: black;"></span>
       <span class="big-blue-1" id="blue1" [style]="flash"></span>
@@ -16,74 +9,112 @@
       <span class="big-blue-2"></span>
       <span class="big-blue-white"></span>
     </div>
+    <div class="poke-pic">
+      <img src= "{{pokemonData.sprites.other['official-artwork'].front_default}}" alt="{{pokemonId}}"> 
+    </div>
+    <div class="pokemon-id">
+      <div class="pokemon-number">No. {{pokemonData.id}}</div>
+      <div class="pokemon-name">{{pokemonData.name | uppercase}}</div>
+    </div>
   </div>
-
-  <div class="divider"></div>
 
   <div class="right-data">
-    <div class="entry" id="entry">{{entry}}</div>
-    <div class="primary-type">{{pokemonData.types[0].type.name | uppercase}}</div>
-    <div class="secondary-type">{{pokemonData!.types[1].type.name | uppercase}}</div>
 
-  </div>
-  <div class="search">
-    <form #form="ngForm" (submit)="onSubmit()">
-      <input type="text" placeholder="Search For A Pokemon!" name="pokemon"
-      [(ngModel)]="pokemonId"> 
-      <input type="submit" value="Go!" class="go">
-    </form>
-    <form #form="ngForm" (submit)="onRandom()">
-      <input type="submit" value="Random!" class="random"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="up()">
-      <input type="submit" value="↑" class="up"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="down()">
-      <input type="submit" value="↓" class="down"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="addZero()">
-      <input type="submit" value="0" class="zero"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="addOne()">
-      <input type="submit" value="1" class="one"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="addTwo()">
-      <input type="submit" value="2" class="two"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="addThree()">
-      <input type="submit" value="3" class="three"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="addFour()">
-      <input type="submit" value="4" class="four"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="addFive()">
-      <input type="submit" value="5" class="five"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="addSix()">
-      <input type="submit" value="6" class="six"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="addSeven()">
-      <input type="submit" value="7" class="seven"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="addEight()">
-      <input type="submit" value="8" class="eight"
-      [(ngModel)]="pokemonId">
-    </form>
-    <form #form="ngForm" (submit)="addNine()">
-      <input type="submit" value="9" class="nine"
-      [(ngModel)]="pokemonId">
-    </form>
+    <div class="search-container">
+      <form #form="ngForm">
+        <input type="text" placeholder="Search For A Pokémon!" name="pokemon"
+        [(ngModel)]="pokemonId"> 
+      </form>
+    </div>
+
+    <!-- <div class="search-container">
+      <form #form="ngForm" (submit)="onSubmit()">
+        <input type="text" placeholder="Search For A Pokémon!" name="pokemon"
+        [(ngModel)]="pokemonId"> 
+        <input type="submit" value="Go!" class="go">
+      </form>
+    </div>
+
+    <div class="random-button-container">
+      <form #form="ngForm" (submit)="onRandom()">
+        <input type="submit" value="Random!" class="random"
+        [(ngModel)]="pokemonId">
+      </form>
+    </div> -->
+    
+    <div class="entry" id="entry">{{entry}}</div>
+
+    <div class="upper-number-buttons-container">
+      <form #form="ngForm" (submit)="addNumber(0)">
+        <input type="submit" value="0" class="number-button"
+        [(ngModel)]="pokemonId">
+      </form>
+      <form #form="ngForm" (submit)="addNumber(1)">
+        <input type="submit" value="1" class="number-button"
+        [(ngModel)]="pokemonId">
+      </form>
+      <form #form="ngForm" (submit)="addNumber(2)">
+        <input type="submit" value="2" class="number-button"
+        [(ngModel)]="pokemonId">
+      </form>
+      <form #form="ngForm" (submit)="addNumber(3)">
+        <input type="submit" value="3" class="number-button"
+        [(ngModel)]="pokemonId">
+      </form>
+      <form #form="ngForm" (submit)="addNumber(4)">
+        <input type="submit" value="4" class="number-button"
+        [(ngModel)]="pokemonId">
+      </form>
+    </div>
+
+    <div class="lower-number-buttons-container">
+      <form #form="ngForm" (submit)="addNumber(5)">
+        <input type="submit" value="5" class="number-button"
+        [(ngModel)]="pokemonId">
+      </form>
+      <form #form="ngForm" (submit)="addNumber(6)">
+        <input type="submit" value="6" class="number-button"
+        [(ngModel)]="pokemonId">
+      </form>
+      <form #form="ngForm" (submit)="addNumber(7)">
+        <input type="submit" value="7" class="number-button"
+        [(ngModel)]="pokemonId">
+      </form>
+      <form #form="ngForm" (submit)="addNumber(8)">
+        <input type="submit" value="8" class="number-button"
+        [(ngModel)]="pokemonId">
+      </form>
+      <form #form="ngForm" (submit)="addNumber(9)">
+        <input type="submit" value="9" class="number-button"
+        [(ngModel)]="pokemonId">
+      </form>
+    </div>
+
+    <div class="increment-buttons-container">
+      <form #form="ngForm" (submit)="up()">
+        <input type="submit" value="↑" class="up"
+        [(ngModel)]="pokemonId">
+      </form>
+      <form #form="ngForm" (submit)="down()">
+        <input type="submit" value="↓" class="down"
+        [(ngModel)]="pokemonId">
+      </form>
+    </div>
+
+    <div class="action-buttons-container">
+      <form #form="ngForm" (submit)="onSubmit()">
+        <input type="submit" value="Go!" class="go">
+      </form>
+      <form #form="ngForm" (submit)="onRandom()">
+        <input type="submit" value="Random!" class="random">
+      </form>
+    </div>
+
+    <div class="type-container">
+      <div class="primary-type">{{pokemonData.types[0].type.name | uppercase}}</div>
+      <div class="secondary-type">{{pokemonData!.types[1].type.name | uppercase}}</div>
+    </div>
+
   </div>
 </div>
 
