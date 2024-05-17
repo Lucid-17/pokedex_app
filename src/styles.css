@@ -49,15 +49,15 @@ body {
 
 @media (max-width: 768px) {
     .container{
-        width: 95%;
-        padding: 10px;
+        width: 85%;
+        padding: 5px;
         box-shadow: 5px 5px 10px var(--shadow-dark);
     }
     .body{
         padding: 10px;
     }
     .upper-number-button, .lower-number-button, .up, .down, .go, .random {
-        padding: 15px 30px;  
+        padding: 10px 20px;  
         font-size: 1.2rem;  
     }
     .entry, .pokemon-id {
