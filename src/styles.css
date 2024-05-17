@@ -50,12 +50,14 @@ body {
 @media (max-width: 768px) {
     .container{
         width: 100%;
-        margin-left: 10px;
         max-width: 450px;
+        margin: 0 auto;
         padding: 5px;
+        display: flex;
+        flex-direction: column;
         box-shadow: 5px 5px 10px var(--shadow-dark);
     }
-    .body{
+    body{
         padding: 10px;
     }
     .upper-number-button, .lower-number-button, .up, .down, .go, .random {
@@ -66,8 +68,8 @@ body {
         font-size: 1.2rem; 
     }
     .left-data, .right-data {
-        width: 50%;  
-        order: unset;
+        width: 100%;  
+        flex: none;
     }
     .increment-buttons-container, .action-buttons-container {
         justify-content: center;  
