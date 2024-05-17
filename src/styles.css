@@ -49,8 +49,9 @@ body {
 
 @media (max-width: 768px) {
     .container{
-        width: 95%;
-        max-width: 400px;
+        width: 100%;
+        margin-left: 10px;
+        max-width: 450px;
         padding: 5px;
         box-shadow: 5px 5px 10px var(--shadow-dark);
     }
@@ -65,7 +66,7 @@ body {
         font-size: 1.2rem; 
     }
     .left-data, .right-data {
-        width: 100%;  
+        width: 50%;  
         order: unset;
     }
     .increment-buttons-container, .action-buttons-container {
