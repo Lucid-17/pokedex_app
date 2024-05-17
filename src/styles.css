@@ -49,23 +49,29 @@ body {
 
 @media (max-width: 768px) {
     .container{
-        flex-direction: column;
-    }
-    .left-data {
-        width: 100%;
+        width: 95%;
         padding: 10px;
-        order: 1;
+        box-shadow: 5px 5px 10px var(--shadow-dark);
     }
-    .divider {
-        width: 100%; 
-        height: 10px;
-        margin: 10px 0; 
-        order: 2; 
+    .body{
+        padding: 10px;
     }
-    .right-data {
-        width: 100%;
-        padding: 10px; 
-        order: 3; 
+    .upper-number-button, .lower-number-button, .up, .down, .go, .random {
+        padding: 15px 30px;  
+        font-size: 1.2rem;  
+    }
+    .entry, .pokemon-id {
+        font-size: 1.2rem; 
+    }
+    .left-data, .right-data {
+        width: 100%;  
+        order: unset;
+    }
+    .increment-buttons-container, .action-buttons-container {
+        justify-content: center;  
+    }
+    .poke-pic {
+        padding-top: 100%; 
     }
 }
 
@@ -237,7 +243,11 @@ body {
     border-radius: 2px;
 }
 
-.number-button:hover {
+.upper-number-button:hover {
+    background-color: var(--blue-three);
+}
+
+.lower-number-button:hover {
     background-color: var(--blue-three);
 }
 
@@ -247,7 +257,7 @@ body {
     width: 22%;
     margin-top: 10px;
     margin-left: auto;
-    margin-right: 23px;
+    margin-right: 37px;
 }
 
 .up, .down {
