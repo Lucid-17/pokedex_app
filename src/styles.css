@@ -54,7 +54,7 @@ body {
         margin: 0 auto;
         padding: 5px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         box-shadow: 5px 5px 10px var(--shadow-dark);
     }
     body{
@@ -69,13 +69,14 @@ body {
     }
     .left-data, .right-data {
         width: 100%;  
-        flex: none;
+        padding: 5px;
+        margin-top: 5px;
     }
     .increment-buttons-container, .action-buttons-container {
         justify-content: center;  
     }
     .poke-pic {
-        padding-top: 100%; 
+        padding-top: 50%; 
     }
 }
 
