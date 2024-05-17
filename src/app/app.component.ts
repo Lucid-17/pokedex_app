@@ -13,56 +13,64 @@ export class AppComponent implements OnInit {
   
   constructor(private dataService: DataService){}
   
-  pokemonId: string | number = '';
+  pokemonId: number | string = '';
   pokemonData?: PokemonData;
   pokemonEntry?: PokemonEntryData;
   flash: string = 'background-color: #27a9fb;';
   entry: string | undefined = '';
+  secondaryType: string | undefined = '';
 
-  addNumber(num1: number): void {
-    this.pokemonId += `${num1}`;
-  };
+  populateSearch(num: number): void {
+    this.pokemonId += `${num}`;
+  }
    
   ngOnInit(): void {
     this.onRandom();
   }
 
-  onSubmit() {
-    this.getPokemonInfo(this.pokemonId);
-    this.pokemonId = '';
-    this.pokemonData!.types[1].type.name = '';
+  onSubmit(): void {
+    if (this.pokemonId) {
+      this.getPokemonInfo(this.pokemonId);
+      this.getPokedexEntry(this.pokemonId);
+      if (this.pokemonData!.types.length > 1) {
+        this.secondaryType = this.pokemonData?.types[1].type.name
+      };
+      this.pokemonId = '';
+    }
   }
 
-  onRandom() {
+  onRandom(): void {
     this.pokemonId = Math.floor(Math.random() * (1025 - 1 + 1)) + 1;
     this.getPokemonInfo(this.pokemonId);
+    this.getPokedexEntry(this.pokemonId);
     this.pokemonId = '';
-    this.pokemonData!.types[1].type.name = '';
   }
 
-  up() {
+  up(): void {
     this.pokemonId = this.pokemonData!.id + 1;
     this.onSubmit();
   }
 
-  down() {
+  down(): void {
     this.pokemonId = this.pokemonData!.id - 1;
     this.onSubmit();
   }
 
-  getPokemonInfo(pokemonName: string | number) {
-    this.dataService.getPokemonData(pokemonName)
-    .subscribe({
+  getPokemonInfo(pokemonName: string | number): void {
+    this.dataService.getPokemonData(pokemonName).subscribe({
       next: (response) => {
         this.pokemonData = response;
         console.log(response);
         if (this.pokemonData.types.length > 1) {
-          this.pokemonData.types[1].type.name = this.pokemonData.types[1].type.name;
+          this.secondaryType = this.pokemonData.types[1].type.name;
         } else {
-          this.pokemonData.types[1].type.name = this.pokemonData.types[0].type.name;
+          this.secondaryType = '';
         }
       }
-    });
+    })
+  }
+
+  getPokedexEntry(pokemonName: string | number): void {
     this.dataService.getPokemonEntry(pokemonName)
     .subscribe({
       next: (response_2) => {
@@ -80,8 +88,8 @@ export class AppComponent implements OnInit {
         };
       }
     })
-    
   }
+
   title = 'pokedex-app'
 
 }

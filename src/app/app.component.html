@@ -26,79 +26,30 @@
         [(ngModel)]="pokemonId"> 
       </form>
     </div>
-
-    <!-- <div class="search-container">
-      <form #form="ngForm" (submit)="onSubmit()">
-        <input type="text" placeholder="Search For A Pokémon!" name="pokemon"
-        [(ngModel)]="pokemonId"> 
-        <input type="submit" value="Go!" class="go">
-      </form>
-    </div>
-
-    <div class="random-button-container">
-      <form #form="ngForm" (submit)="onRandom()">
-        <input type="submit" value="Random!" class="random"
-        [(ngModel)]="pokemonId">
-      </form>
-    </div> -->
     
     <div class="entry" id="entry">{{entry}}</div>
 
     <div class="upper-number-buttons-container">
-      <form #form="ngForm" (submit)="addNumber(0)">
-        <input type="submit" value="0" class="number-button"
-        [(ngModel)]="pokemonId">
-      </form>
-      <form #form="ngForm" (submit)="addNumber(1)">
-        <input type="submit" value="1" class="number-button"
-        [(ngModel)]="pokemonId">
-      </form>
-      <form #form="ngForm" (submit)="addNumber(2)">
-        <input type="submit" value="2" class="number-button"
-        [(ngModel)]="pokemonId">
-      </form>
-      <form #form="ngForm" (submit)="addNumber(3)">
-        <input type="submit" value="3" class="number-button"
-        [(ngModel)]="pokemonId">
-      </form>
-      <form #form="ngForm" (submit)="addNumber(4)">
-        <input type="submit" value="4" class="number-button"
-        [(ngModel)]="pokemonId">
-      </form>
+      <button *ngFor="let num of [0, 1, 2, 3, 4]" (click)="populateSearch(num)"
+      class="upper-number-button">
+      {{num}}
+      </button>
     </div>
 
     <div class="lower-number-buttons-container">
-      <form #form="ngForm" (submit)="addNumber(5)">
-        <input type="submit" value="5" class="number-button"
-        [(ngModel)]="pokemonId">
-      </form>
-      <form #form="ngForm" (submit)="addNumber(6)">
-        <input type="submit" value="6" class="number-button"
-        [(ngModel)]="pokemonId">
-      </form>
-      <form #form="ngForm" (submit)="addNumber(7)">
-        <input type="submit" value="7" class="number-button"
-        [(ngModel)]="pokemonId">
-      </form>
-      <form #form="ngForm" (submit)="addNumber(8)">
-        <input type="submit" value="8" class="number-button"
-        [(ngModel)]="pokemonId">
-      </form>
-      <form #form="ngForm" (submit)="addNumber(9)">
-        <input type="submit" value="9" class="number-button"
-        [(ngModel)]="pokemonId">
-      </form>
+      <button *ngFor="let num of [5, 6, 7, 8, 9]" (click)="populateSearch(num)"
+      class="lower-number-button">
+      {{num}}
+      </button>
     </div>
 
     <div class="increment-buttons-container">
-      <form #form="ngForm" (submit)="up()">
-        <input type="submit" value="↑" class="up"
-        [(ngModel)]="pokemonId">
-      </form>
-      <form #form="ngForm" (submit)="down()">
-        <input type="submit" value="↓" class="down"
-        [(ngModel)]="pokemonId">
-      </form>
+      <button (click)="up()" class="up">
+        ↑
+      </button>
+      <button (click)="down()" class="down">
+        ↓
+      </button>
     </div>
 
     <div class="action-buttons-container">
@@ -112,7 +63,7 @@
 
     <div class="type-container">
       <div class="primary-type">{{pokemonData.types[0].type.name | uppercase}}</div>
-      <div class="secondary-type">{{pokemonData!.types[1].type.name | uppercase}}</div>
+      <div class="secondary-type">{{secondaryType | uppercase}}</div>
     </div>
 
   </div>
