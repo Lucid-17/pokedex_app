@@ -4,15 +4,13 @@
     --blue-1: #28aafd; /* buttons */
     --green-1: #51ad60; /* screen */
     --white-1: #e3e3e3; /* buttons */
-    --white-2: #dfe8e3; /*lights*/
-    --white-3: #9bd9fe; /*lights*/
+    --white-2: #dfe8e3; /* lights */
+    --white-3: #9bd9fe; /* lights */
     --shadow-dark: rgba(0,0,0,0.3);
     --shadow-light: rgba(255,255,255,0.1);
     --blue-two: #27a9fb; /* lights */
     --blue-three: #196a9f; /* lights */
-/*  */
 }
-
 
 * {
     margin: 0;
@@ -32,11 +30,12 @@ body {
 }
 
 .container {
-    width: 800px;
-    height: auto;
+    width: 80vw; 
+    max-width: 1200px;
+    min-width: 320px; 
     background-color: var(--red-1);
     border-radius: 10px;
-    box-shadow: 10px 10px 10px 10px var(--shadow-dark);
+    box-shadow: 10px 10px 10px var(--shadow-dark);
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -47,137 +46,9 @@ body {
     outline-color: #000;
 }
 
-@media (max-width: 768px) {
-    .container{
-        position: absolute;
-        width: 95%;
-        height: 95%;
-        left: 2.5%;
-        top: 2.5%;
-        flex-wrap: wrap;
-        justify-content: center;
-        box-shadow: 5px 5px 10px var(--shadow-dark);
-    }
-    html, body {
-        height: 100%;
-        max-height: 100%; 
-        overflow: hidden; 
-        margin: 0; 
-        padding: 0; 
-    }
-    .left-data, .right-data {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-    }
-    .top-lights {
-       margin-top: -10%;
-    }
-    .pokemon-id {
-        position: relative;
-        font-size: 1rem;
-        scale: 70%;  
-        top: -95%;
-        right: -10%;
-    }
-    .poke-pic {
-        width: 45%;
-        padding-top: 75%;
-        background-color: var(--white-1);
-        border-radius: 10px;
-        outline-style: solid;
-        outline-color: #000;
-        scale: 55%;
-        top: -41%;
-        left: -26%;
-    }
-    .poke-pic img {
-        background-color: var(--black-1);
-        outline-style: solid;
-        outline-color: #000;
-        top: 10%;
-        left: 10%;
-        width: 80%;
-        height: 80%;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-    .entry {
-        position: relative;
-        max-height: 200px;
-        font-size: 1.2rem;
-        scale: 58%;
-        top: -118.6%;
-        margin-left: 50%;
-    }
-    .search-container {
-        position: relative;
-        top: -60%;
-        margin-right: 0%;
-    }
-    .primary-type {
-        position: relative;
-        scale: 80%;
-        top: -1700%;
-        left: 5%;
-        outline-width: 5px;
-    }
-    .secondary-type {
-        position: relative;
-        scale: 80%;
-        top: -1700%;
-        right: 0%;
-        outline-width: 5px;
-    }
-    .upper-number-buttons-container {
-        position: relative;
-        top: -105%;
-        right: 0%;
-    }
-    .lower-number-buttons-container {
-        position: relative;
-        top: -106%;
-        right: 0%;
-    }
-   .increment-buttons-container {
-        position: relative;
-        top: -105%;
-        right: 10%;
-   }
-   .action-buttons-container {
-        position: relative;
-        top: -110%;
-   }
-   .go {
-        position: absolute;
-        top: 30%;
-        left: -35px;
-   }
-   .random {
-        position: absolute;
-        top: 68px;
-        left: -50px;
-   }
-   .up {
-        position: relative;
-        right: -83%;
-        top: 100%;
-        scale: 175%;
-   }
-   .down {
-        position: relative;
-        scale: 175%;
-        right: -25%;
-        top: 400%;
-   }
-}
-
-.left-data {
-    flex: 1;
-    width: 400px;
+.left-data, .right-data {
+    flex: 1 1 50%;
+    max-width: 50%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -188,10 +59,26 @@ body {
 
 .top-lights {
     position: relative;
-    height: 100%;
-    width: 100%;
+    width: 100%;  
+    display: flex;  
+    flex-wrap: wrap; 
+    justify-content: flex-start;  
+    align-items: flex-start;  
 }
 
+.big-blue-1{
+    height: 55px;  
+    width: 55px;
+    z-index: 1;
+    border-radius: 50%;
+    display: inline-block;    
+    margin-left: -58px;
+    margin-top: 3px;
+    outline-style: solid;
+    outline-color: #000;
+    outline-width: 2px;
+    background-color: var(--white-2); 
+}
 .big-blue-back {
     height: 62px;
     width: 62px;
@@ -206,27 +93,14 @@ body {
     outline-width: 2px;
   }
 
-.big-blue-1 {
-    height: 50px;
-    width: 50px;
-    z-index: 1;
-    border-radius: 50%;
-    display: inline-block;
-    margin-left: -55px;
-    margin-bottom: 28px;
-    outline-style: solid;
-    outline-color: #000;
-    outline-width: 2px;
-}
-
 .big-blue-dark {
     height: 45px;
     width: 45px;
     z-index: 1;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -46px;
-    margin-bottom: 29px;
+    margin-left: -48px;
+    margin-top: 6px;
     background-color: var(--blue-three);
   }
 
@@ -237,7 +111,7 @@ body {
     border-radius: 50%;
     display: inline-block;
     margin-left: -44px;
-    margin-bottom: 45px;
+    margin-top: 5px;
     background-color: var(--blue-two);
 }
 
@@ -247,63 +121,54 @@ body {
     z-index: 1;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -25px;
-    margin-bottom: 62px;
+    margin-left: -23px;
+    margin-top: 10px;
     background-color: var(--white-3);
 }
 
 .poke-pic {
-    width: 90%;
-    padding-top: 90%;
+    width: 90%; 
+    padding-top: 90%; 
+    margin-top: 5%;
     position: relative;
     background-color: var(--white-1);
     border-radius: 10px;
     outline-style: solid;
     outline-color: #000;
+    overflow: hidden; 
 }
 
 .poke-pic img {
     position: absolute;
-    background-color: var(--black-1);
+    top: 10%; 
+    left: 10%; 
+    width: 80%; 
+    height: 80%; 
+    object-fit: cover; 
+    border-radius: 10px;
+    background-color: var(--black-1); 
     outline-style: solid;
     outline-color: #000;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
-    border-radius: 10px;
 }
 
+
 .pokemon-id {
-    width: 350px;
+    width: 90%;
+    min-height: 7vh;
+    height: auto;
+    overflow: auto;
     text-align: center;
-    margin-top: 20%;
+    align-items: center;
+    margin-top: 20px; 
     background-color: var(--green-1);
     border-radius: 5px;
     outline-style: solid;
     outline-color: #000;
-}
-
-.pokemon-number, .pokemon-name {
-    color: var(--white-1);
-    font-weight: bold;
-    padding: 5px 0;
-}
-
-.right-data {
-    flex: 1;
-    width: 400px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: transparent;
+    padding: 3%;
 }
 
 .entry {
-    width: 300px;
+    width: 100%;
     max-width: 500px;
     min-height: 300px;
     overflow: auto;
@@ -312,13 +177,43 @@ body {
     color: var(--white-1);
     border: 2px solid var(--blue-three);
     border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     box-sizing: border-box;
     outline-style: solid;
     outline-color: #000; 
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
+.search-container input[type="text"] {
+    font-family: "Press Start 2P", "consolas", sans-serif;
+    font-size: calc(4px + 1vw);
+    overflow: auto;
+    width: 100%;
+    padding: 8px;
+    border: 2px solid var(--blue-1);
+    border-radius: 5px;
+    color: rgb(112, 112, 19);
+}
+
+.type-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.primary-type, .secondary-type {
+    width: 50%;
+    margin: 2%;
+    overflow: auto;
+    flex: 1;
+    padding: 20px;
+    background-color: var(--black-1);
+    color: var(--white-1);
+    text-align: center;
+    border-radius: 10px;
+    outline-style: solid;
+    outline-color: #000;
+}
 .upper-number-buttons-container, .lower-number-buttons-container {
     display: flex;
     margin-right: 10px;
@@ -329,9 +224,11 @@ body {
 }
 
 .upper-number-button, .lower-number-button {
-    flex: 0 0 10%;
-    padding: 12px 24px;
+    font-family: "Press Start 2P", "consolas", sans-serif;
+    flex: 1 0 18%; 
+    padding: 12px 2%; 
     margin: 1px;
+    min-width: 40px; 
     background-color: var(--blue-1);
     color: var(--white-1);
     outline-style: solid;
@@ -341,100 +238,118 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 2px;
+    font-size: calc(4px + 1vw); 
 }
 
-.upper-number-button:hover {
-    background-color: var(--blue-three);
+
+.action-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.lower-number-button:hover {
-    background-color: var(--blue-three);
+.go, .random {
+    font-family: "Press Start 2P", "consolas", sans-serif;
+    padding: 12px 24px;
+    background-color: var(--white-1);
+    overflow: auto;
+    max-width: 100%;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    outline-style: solid;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    transition: background-color 0.3s;
+}
+
+.up, .down {
+    font-family: "Press Start 2P", "consolas", sans-serif;
+    padding: 12px 24px;
+    background-color: var(--black-1);
+    overflow: auto;
+    max-width: 100%;
+    color: var(--white-3);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    transition: background-color 0.3s;
 }
 
 .increment-buttons-container {
     display: flex;
-    justify-content: flex-end;
-    width: 22%;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: 37px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.up, .down {
-    flex: 1;
-    padding: 4px 16px;
-    margin: 0 2px;
-    background-color: var(--black-1);
-    color: var(--blue-two);
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.up:hover, .down:hover {
-    background-color: var(--blue-three);
-}
-
-.action-buttons-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 20px 0;
-    margin-left: -115px;
-    padding-left: 0;
-}
-
-.go, .random {
-    padding: 12px 24px;
-    margin-right: 2px;
-    background-color: var(--white-1);
-    color: black;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.go:hover, .random:hover {
+.go:hover, .random:hover, .up:hover, .down:hover {
     background-color: var(--blue-three); 
 }
 
-.random-button-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        padding: 10px; 
+        align-items: center; 
+    }
+
+    .left-data, .right-data {
+        width: 100%; 
+        max-width: none; 
+        padding: 10px; 
+    }
+
+    .poke-pic {
+        padding-top: 100%;
+    }
+
+    .pokemon-id {
+        width: 90%; 
+        padding: 10px; 
+        font-size: 1.2rem;
+    }
+
+    .entry, .type-container, .action-buttons-container {
+        width: 90%; 
+    }
+    
+    .search-container input[type="text"] {
+        width: 100%;
+    }
+    .primary-type, .secondary-type {
+        width: 100%; 
+        padding: 15px; 
+        margin: 5px 0; 
+    }
+
+    .upper-number-button, .lower-number-button, .go, .random, .up, .down {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .action-buttons-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .increment-buttons-container {
+        flex-direction: column; 
+    }
 }
 
-.search-container input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 2px solid var(--blue-1);
-    border-radius: 5px;
-    color: rgb(112, 112, 19);
-}
 
-.type-container {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 20px;
-    margin-right: 25px;
-}
 
-.primary-type, .secondary-type {
-    width: 180px;
-    flex: 1;
-    padding: 20px;
-    margin: 5px;
-    min-width: 150px;
-    background-color: var(--black-1);
-    color: var(--white-1);
-    text-align: center;
-    border-radius: 10px;
-    outline-style: solid;
-    outline-color: #000;
-}
+
+
+
+
+
+
+
+
+
